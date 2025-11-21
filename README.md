@@ -31,7 +31,7 @@ After three failures, the order is sent to the Dead Letter Queue, while valid on
 
 ### Dead Letter Queue
 
-<img width="1536" height="166" alt="Screenshot 2025-11-21 1955031" src="https://github.com/user-attachments/assets/19f4d56d-7ec5-4136-b7c3-f704122419f6" />
+<img width="1902" height="685" alt="Screenshot 2025-11-21 200003" src="https://github.com/user-attachments/assets/2b0eb5dd-9655-4aef-b00d-33e1b4f76323" />
 
 
 ## 🚀 Quick Start
@@ -75,5 +75,6 @@ python consumer.py
 cd producer
 python producer.py
 ```
+
 
 
