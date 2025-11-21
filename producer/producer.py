@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import io
 import json
 import time
@@ -37,7 +36,7 @@ def produce_order(record, max_attempts=5):
         try:
             data_bytes = avro_serialize(record, SCHEMA)
             p.produce(TOPIC, value=data_bytes, callback=delivery_report)
-            p.poll(0)  # serve delivery callbacks
+            p.poll(0) 
             return True
         except Exception as e:
             attempt += 1
@@ -61,7 +60,7 @@ if __name__ == "__main__":
             order = gen_random_order()
             print("[Producer] Sending:", order)
             produce_order(order)
-            p.flush(timeout=5)  # wait for outstanding deliveries
-            time.sleep(1)  # produce one per second
+            p.flush(timeout=5)  
+            time.sleep(1)  
     except KeyboardInterrupt:
         print("Producer stopped by user.")
