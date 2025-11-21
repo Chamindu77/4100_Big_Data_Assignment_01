@@ -11,7 +11,7 @@ A real-time order processing system using Apache Kafka with Avro serialization, 
 - ✅ **Kafka Integration** - Producer/Consumer pattern with Python
 
 ## 📝 Script
-The script generates random orders like Item1, Item2 with random prices.
+The script generates random orders like Item1, Item2, Item3, Item4 with random prices.
 If a price is above 95, the consumer retries processing it up to three times.
 After three failures, the order is sent to the Dead Letter Queue, while valid ones update the running average.
 
@@ -75,4 +75,5 @@ python consumer.py
 cd producer
 python producer.py
 ```
+
 
