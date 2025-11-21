@@ -28,3 +28,45 @@ A real-time order processing system using Apache Kafka with Avro serialization, 
 
 <img width="1536" height="166" alt="Screenshot 2025-11-21 1955031" src="https://github.com/user-attachments/assets/19f4d56d-7ec5-4136-b7c3-f704122419f6" />
 
+
+## 🚀 Quick Start
+
+### 1. Prerequisites
+- Docker & Docker Compose
+- Python 3.8+
+
+### 2. Start Kafka Infrastructure
+```
+docker-compose up -d
+```
+### 3. Create Topics
+```
+chmod +x create_topics.sh
+./create_topics.sh
+```
+
+### 4. Setup Python Environment
+```
+# Producer
+cd producer
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+
+# Consumer (new terminal)
+cd consumer
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+### 5. Run the System
+```
+# Terminal 1 - Start Consumer
+cd consumer
+python consumer.py
+
+# Terminal 2 - Start Producer
+cd producer
+python producer.py
+```
